@@ -89,4 +89,272 @@ h1{
   margin:28px 0;
 }
 .guarantee-strip .badge{
-  font-family
+  font-family:var(--font-display);
+  font-size:28px;
+  margin-right:12px;
+}
+
+/* Steps */
+h2{
+  font-family:var(--font-display);
+  font-size:clamp(22px,3vw,28px);
+  margin-bottom:18px;
+}
+.steps-list{
+  padding-left:20px;
+  margin:0;
+}
+.steps-list li{
+  margin-bottom:10px;
+  font-size:14.5px;
+  color:var(--ink-soft);
+}
+.steps-list li strong{
+  color:#000;
+}
+
+/* Ship Box */
+.ship-box{
+  background:var(--panel);
+  border:2px solid var(--accent-soft);
+  border-radius:10px;
+  padding:18px 20px;
+  margin-top:18px;
+  font-size:14px;
+}
+.ship-box .label{
+  font-size:11px;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:6px;
+}
+
+/* Form */
+.pmr-form-wrap{
+  background:var(--panel);
+  border:2px solid var(--accent);
+  border-radius:12px;
+  padding:28px;
+}
+.pmr-field{
+  margin-bottom:14px;
+}
+
+/* ⭐ LABELS PATCHED TO BLACK */
+label{
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  color:#000; /* FIXED — labels now visible */
+}
+
+input,textarea{
+  width:100%;
+  padding:11px 12px;
+  font-size:14px;
+  border:1.5px solid var(--accent-soft);
+  border-radius:8px;
+  background:#FFF;
+  color:var(--ink);
+}
+input::placeholder,
+textarea::placeholder{
+  color:#000 !important;
+  opacity:1;
+}
+textarea{ min-height:80px; resize:vertical; }
+input:focus,textarea:focus{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(30,99,255,0.25);
+}
+
+.pmr-row2{
+  display:flex;
+  gap:12px;
+}
+.pmr-row2 .pmr-field{ flex:1; }
+@media(max-width:480px){
+  .pmr-row2{ flex-direction:column; gap:0; }
+}
+
+/* Terms Checkbox */
+.agree-row{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  background:#FFF;
+  border:1.5px solid var(--accent-soft);
+  padding:14px 16px;
+  border-radius:10px;
+  margin:18px 0 20px;
+}
+.agree-row input[type="checkbox"]{
+  width:16px;
+  height:16px;
+  margin-top:3px;
+}
+.agree-row a{
+  color:var(--accent);
+  font-weight:700;
+  text-decoration:underline;
+}
+
+/* Submit */
+.pmr-submit{
+  width:100%;
+  background:var(--accent);
+  color:#FFF;
+  border:none;
+  padding:14px 18px;
+  font-size:15px;
+  font-weight:700;
+  border-radius:8px;
+  cursor:pointer;
+}
+.pmr-submit:hover{
+  background:#0f4fe0;
+}
+.pmr-fine{
+  font-size:11px;
+  color:var(--ink-soft);
+  text-align:center;
+  margin-top:12px;
+}
+
+/* Footer */
+footer{
+  padding:32px 0;
+  font-size:12.5px;
+  color:var(--ink-soft);
+  border-top:2px solid var(--accent);
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <a class="brand" href="/">559<span>·</span>MOBILE REPAIRS</a>
+    <a class="back-link" href="/">← Back to home</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Mail-In Repair</p>
+    <h1>Send it in, we’ll fix it, guaranteed.</h1>
+    <p class="lede">Not local to Fresno? Ship us your device — we diagnose, repair, and return it working.</p>
+
+    <div class="guarantee-strip">
+      <span class="badge">60‑DAY</span>
+      Every mail‑in repair is covered by a 60‑day guarantee.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How mail‑in repair works</h2>
+
+    <ol class="steps-list">
+      <li><strong>Submit the form below</strong> with your device and issue.</li>
+      <li><strong>Pack and ship your device</strong> to the address below.</li>
+      <li><strong>We diagnose and repair it</strong> within 2–3 business days.</li>
+      <li><strong>We ship it back</strong> with your 60‑day guarantee.</li>
+    </ol>
+
+    <div class="ship-box">
+      <span class="label">SHIP YOUR DEVICE TO</span>
+      559 Mobile Repairs<br>
+      39927 Clover Lane<br>
+      Squaw Valley, CA 93675
+      <div style="margin-top:8px;">Include your name, phone number, and issue description.</div>
+    </div>
+  </div>
+</section>
+
+<section id="request">
+  <div class="wrap">
+    <h2>Start a mail‑in request</h2>
+
+    <div class="pmr-form-wrap">
+      <form action="https://formspree.io/f/mbglddaa" method="POST">
+
+        <div class="pmr-row2">
+          <div class="pmr-field">
+            <label>Name</label>
+            <input type="text" name="Name" required>
+          </div>
+          <div class="pmr-field">
+            <label>Phone</label>
+            <input type="tel" name="Phone" required>
+          </div>
+        </div>
+
+        <div class="pmr-field">
+          <label>Email</label>
+          <input type="email" name="Email" required>
+        </div>
+
+        <div class="pmr-field">
+          <label>Device</label>
+          <input type="text" name="Device" placeholder="e.g. iPhone 13, LG V50, Galaxy S22" required>
+        </div>
+
+        <div class="pmr-field">
+          <label>What's going on?</label>
+          <textarea name="Issue" required></textarea>
+        </div>
+
+        <div class="pmr-row2">
+          <div class="pmr-field">
+            <label>Return Street Address</label>
+            <input type="text" name="Return Address" required>
+          </div>
+          <div class="pmr-field">
+            <label>Return City</label>
+            <input type="text" name="Return City" required>
+          </div>
+        </div>
+
+        <div class="pmr-row2">
+          <div class="pmr-field">
+            <label>State</label>
+            <input type="text" name="Return State" required>
+          </div>
+          <div class="pmr-field">
+            <label>ZIP</label>
+            <input type="text" name="Return ZIP" required>
+          </div>
+        </div>
+
+        <div class="agree-row">
+          <input type="checkbox" name="AgreedToTerms" required>
+          <label>I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a>.</label>
+        </div>
+
+        <button type="submit" class="pmr-submit">Submit Mail‑In Request</button>
+        <p class="pmr-fine">We’ll follow up with a price estimate before you ship anything.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 559 Mobile Repairs</span>
+    <span>(559) 240‑7191 · jonathan@559fix.com</span>
+    <span>Serving Fresno & the 559 area</span>
+  </div>
+</footer>
+
+</body>
+</html>
