@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mail-In Repair — 559 Mobile Repairs</title>
+<title>559 Mobile Repairs — Phone & Tablet Repair, Fresno</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@ body{
   line-height:1.5;
 }
 .wrap{
-  max-width:900px;
+  max-width:1080px;
   margin:0 auto;
   padding:0 24px;
 }
@@ -40,7 +40,7 @@ a{ color:inherit; text-decoration:none; }
 
 /* ---------- Header ---------- */
 header{
-  padding:18px 0;
+  padding:16px 0;
   border-bottom:2px solid var(--accent);
   background:var(--paper);
   position:sticky;
@@ -49,94 +49,181 @@ header{
 }
 .header-row{
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
 }
 .brand{
   font-family:var(--font-display);
   font-size:20px;
 }
 .brand span{ color:var(--accent); }
-.back-link{
+
+nav.primary-nav{
+  display:flex;
+  gap:24px;
+}
+nav.primary-nav a{
   font-size:14px;
   font-weight:600;
-  color:var(--accent);
-}
-
-/* ---------- Section Shell ---------- */
-section{
-  padding:32px 0;
-}
-
-/* ---------- Hero ---------- */
-.hero{
-  background:linear-gradient(135deg,#FFFFFF,#E9F0FF,#D6E4FF);
-  padding:48px 0 24px;
-}
-.eyebrow{
-  color:var(--accent);
-  font-weight:700;
-  font-size:13px;
-  margin-bottom:8px;
-}
-h1{
-  font-family:var(--font-display);
-  font-size:clamp(28px,4.4vw,42px);
-  margin:0 0 14px;
-}
-.lede{
-  font-size:16px;
-  color:var(--ink-soft);
-  max-width:60ch;
-}
-
-/* ---------- Guarantee ---------- */
-.guarantee-strip{
-  background:var(--accent);
-  color:#FFF;
-  padding:20px;
-  border-radius:10px;
-  margin:28px 0;
-}
-.guarantee-strip .badge{
-  font-family:var(--font-display);
-  font-size:28px;
-  margin-right:12px;
-}
-
-/* ---------- Steps ---------- */
-h2{
-  font-family:var(--font-display);
-  font-size:clamp(22px,3vw,28px);
-  margin-bottom:18px;
-}
-.steps-list{
-  padding-left:20px;
-  margin:0;
-}
-.steps-list li{
-  margin-bottom:10px;
-  font-size:14.5px;
-  color:var(--ink-soft);
-}
-.steps-list li strong{
   color:var(--ink);
 }
 
-/* ---------- Ship Box ---------- */
-.ship-box{
+/* ---------- Buttons ---------- */
+.btn{
+  padding:10px 18px;
+  font-size:14px;
+  font-weight:700;
+  border:2px solid var(--accent);
+  border-radius:8px;
+}
+.btn-solid{
+  background:var(--accent);
+  color:#FFF;
+}
+.btn-outline{
+  background:#FFF;
+  color:var(--accent);
+}
+
+/* ---------- Hero ---------- */
+.hero-inner{
+  padding:64px 0 40px;
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:40px;
+  align-items:center;
+  background:linear-gradient(135deg,#FFFFFF,#E9F0FF,#D6E4FF);
+}
+.hero-inner h1{
+  font-family:var(--font-display);
+  font-size:clamp(34px,5.4vw,56px);
+  margin:0 0 20px;
+}
+.hero-inner mark{
+  background:var(--accent);
+  color:#FFF;
+  padding:0 4px;
+}
+.hero-inner p.lede{
+  font-size:17px;
+  color:var(--ink-soft);
+  margin:0 0 24px;
+}
+
+/* ---------- Trust Strip ---------- */
+.trust-strip{
+  padding:20px 0;
+}
+.trust-strip .wrap{
+  display:flex;
+  flex-wrap:wrap;
+  gap:24px;
+  justify-content:space-between;
+  font-size:13px;
+  font-weight:700;
+}
+.trust-strip .dot{
+  width:8px;
+  height:8px;
+  background:var(--accent);
+  border-radius:50%;
+}
+
+/* ---------- Section Head ---------- */
+.section-head{
+  max-width:56ch;
+  margin-bottom:28px;
+}
+.section-head .eyebrow{
+  font-size:13px;
+  font-weight:700;
+  color:var(--accent);
+}
+.section-head h2{
+  font-family:var(--font-display);
+  font-size:clamp(26px,3.6vw,36px);
+  margin:0 0 10px;
+}
+.section-head p{
+  color:var(--ink-soft);
+}
+
+/* ---------- Services ---------- */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.service-card{
   background:var(--panel);
   border:2px solid var(--accent-soft);
   border-radius:10px;
-  padding:18px 20px;
-  margin-top:18px;
-  font-size:14px;
+  padding:20px;
+  position:relative;
 }
-.ship-box .label{
+.service-card::before{
+  content:"";
+  position:absolute;
+  top:-2px;
+  left:-2px;
+  width:10px;
+  height:10px;
+  background:var(--accent);
+  border-radius:3px;
+}
+.service-card h3{
+  font-family:var(--font-display);
+  margin:0 0 8px;
+}
+.service-card p{
+  color:var(--ink-soft);
+}
+
+/* ---------- Steps ---------- */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.step{
+  background:var(--panel);
+  border:2px solid var(--accent-soft);
+  border-radius:10px;
+  padding:18px;
+}
+.step .num{
+  font-family:var(--font-display);
+  font-size:32px;
+  color:var(--accent);
+}
+
+/* ⭐ BLACK STEP TITLES */
+.step h3{
+  color:#000;
+  font-family:var(--font-display);
+  margin:0 0 6px;
+}
+
+/* ---------- Contact Section ---------- */
+.contact-section{
+  background:var(--accent);
+  color:#FFF;
+  padding:40px 0;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:32px;
+}
+.contact-info .label{
   font-size:11px;
   font-weight:700;
-  color:var(--accent);
-  margin-bottom:6px;
+  color:#FFF;
+}
+.phone-big{
+  font-family:var(--font-display);
+  font-size:26px;
+  color:#FFF;
 }
 
 /* ---------- Form ---------- */
@@ -144,13 +231,12 @@ h2{
   background:var(--panel);
   border:2px solid var(--accent);
   border-radius:12px;
-  padding:28px;
+  padding:24px;
 }
 .pmr-field{
   margin-bottom:14px;
 }
 label{
-  display:block;
   font-size:12px;
   font-weight:700;
 }
@@ -169,37 +255,6 @@ input:focus,textarea:focus{
   border-color:var(--accent);
   box-shadow:0 0 0 3px rgba(30,99,255,0.25);
 }
-
-.pmr-row2{
-  display:flex;
-  gap:12px;
-}
-.pmr-row2 .pmr-field{ flex:1; }
-@media(max-width:480px){
-  .pmr-row2{ flex-direction:column; gap:0; }
-}
-
-.agree-row{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  background:var(--paper);
-  border:1.5px solid var(--accent-soft);
-  padding:14px 16px;
-  border-radius:10px;
-  margin:18px 0 20px;
-}
-.agree-row input[type="checkbox"]{
-  width:16px;
-  height:16px;
-  margin-top:3px;
-}
-.agree-row a{
-  color:var(--accent);
-  font-weight:700;
-  text-decoration:underline;
-}
-
 .pmr-submit{
   width:100%;
   background:var(--accent);
@@ -222,14 +277,66 @@ input:focus,textarea:focus{
   margin-top:12px;
 }
 
-/* ---------- Terms ---------- */
-#terms h3{
-  font-family:var(--font-display);
-  font-size:16px;
-  margin:26px 0 8px;
-  color:var(--accent);
-}
-#terms p,#terms li{
-  font-size:13.5px;
+/* ---------- Footer ---------- */
+footer{
+  padding:24px 0 40px;
+  font-size:12.5px;
   color:var(--ink-soft);
-  line-height:1.
+  border-top:2px solid var(--accent);
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">559<span>·</span>MOBILE REPAIRS</div>
+    <nav class="primary-nav">
+      <a href="#services">Services</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-solid" href="#contact">Get a Quote</a>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <h1>Cracked screen?<br>Dead <mark>charging</mark><br>port?</h1>
+      <p class="lede">Bring in your broken phone and get a straight answer fast — free diagnosis, honest pricing, and a fix you can trust.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#contact">Get a Free Quote</a>
+        <a class="btn btn-outline" href="tel:5592407191">Call (559) 240‑7191</a>
+      </div>
+    </div>
+    <div class="hero-art"></div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="wrap">
+    <span class="item"><span class="dot"></span>Free diagnosis</span>
+    <span class="item"><span class="dot"></span>Most phone & tablet models</span>
+    <span class="item"><span class="dot"></span>Quality parts</span>
+    <span class="item"><span class="dot"></span>60‑day guarantee</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What we fix</p>
+      <h2>Screen and port repairs, plus the rest of what breaks</h2>
+      <p>Every repair comes with a free diagnosis up front.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card"><h3>Screen Repair</h3><p>Shattered glass, dead pixels, unresponsive touch
