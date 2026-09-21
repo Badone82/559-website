@@ -4,12 +4,9 @@
 <meta charset="UTF-8">
 <title>559 Mobile Repairs — Phone & Tablet Repair, Fresno</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ---------- Corporate Blue Palette ---------- */
 :root{
   --ink:#0D1A2B;
   --ink-soft:#4A5A6A;
@@ -17,12 +14,10 @@
   --panel:#F5F7FA;
   --accent:#1E63FF;
   --accent-soft:#AFC7FF;
-  --border:#0D1A2B;
   --font-display:'Archivo Black','Space Grotesk',sans-serif;
   --font-body:'Space Grotesk',sans-serif;
 }
 
-/* ---------- Base ---------- */
 *{ box-sizing:border-box; }
 body{
   margin:0;
@@ -38,7 +33,7 @@ body{
 }
 a{ color:inherit; text-decoration:none; }
 
-/* ---------- Header ---------- */
+/* Header */
 header{
   padding:16px 0;
   border-bottom:2px solid var(--accent);
@@ -68,7 +63,7 @@ nav.primary-nav a{
   color:var(--ink);
 }
 
-/* ---------- Buttons ---------- */
+/* Buttons */
 .btn{
   padding:10px 18px;
   font-size:14px;
@@ -85,7 +80,7 @@ nav.primary-nav a{
   color:var(--accent);
 }
 
-/* ---------- Hero ---------- */
+/* Hero */
 .hero-inner{
   padding:64px 0 40px;
   display:grid;
@@ -110,7 +105,7 @@ nav.primary-nav a{
   margin:0 0 24px;
 }
 
-/* ---------- Trust Strip ---------- */
+/* Trust Strip */
 .trust-strip{
   padding:20px 0;
 }
@@ -129,7 +124,7 @@ nav.primary-nav a{
   border-radius:50%;
 }
 
-/* ---------- Section Head ---------- */
+/* Section Head */
 .section-head{
   max-width:56ch;
   margin-bottom:28px;
@@ -148,7 +143,7 @@ nav.primary-nav a{
   color:var(--ink-soft);
 }
 
-/* ---------- Services ---------- */
+/* Services */
 .services-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -179,7 +174,7 @@ nav.primary-nav a{
   color:var(--ink-soft);
 }
 
-/* ---------- Steps ---------- */
+/* Steps */
 .steps{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -196,15 +191,13 @@ nav.primary-nav a{
   font-size:32px;
   color:var(--accent);
 }
-
-/* ⭐ BLACK STEP TITLES */
 .step h3{
   color:#000;
   font-family:var(--font-display);
   margin:0 0 6px;
 }
 
-/* ---------- Contact Section ---------- */
+/* Contact Section */
 .contact-section{
   background:var(--accent);
   color:#FFF;
@@ -226,7 +219,7 @@ nav.primary-nav a{
   color:#FFF;
 }
 
-/* ---------- Form ---------- */
+/* Form */
 .pmr-form-wrap{
   background:var(--panel);
   border:2px solid var(--accent);
@@ -249,6 +242,11 @@ input,textarea{
   background:#FFF;
   color:var(--ink);
 }
+input::placeholder,
+textarea::placeholder{
+  color:#000 !important;
+  opacity:1;
+}
 textarea{ min-height:80px; resize:vertical; }
 input:focus,textarea:focus{
   outline:none;
@@ -256,7 +254,7 @@ input:focus,textarea:focus{
   box-shadow:0 0 0 3px rgba(30,99,255,0.25);
 }
 
-/* ---------- Terms Checkbox ---------- */
+/* Terms Checkbox */
 .agree-row{
   display:flex;
   gap:10px;
@@ -278,6 +276,7 @@ input:focus,textarea:focus{
   text-decoration:underline;
 }
 
+/* Submit */
 .pmr-submit{
   width:100%;
   background:var(--accent);
@@ -292,7 +291,6 @@ input:focus,textarea:focus{
 .pmr-submit:hover{
   background:#0f4fe0;
 }
-
 .pmr-fine{
   font-size:11px;
   color:var(--ink-soft);
@@ -300,7 +298,7 @@ input:focus,textarea:focus{
   margin-top:12px;
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 footer{
   padding:24px 0 40px;
   font-size:12.5px;
@@ -444,7 +442,6 @@ footer .wrap{
             <textarea name="Issue" required></textarea>
           </div>
 
-          <!-- TERMS CHECKBOX -->
           <div class="agree-row">
             <input type="checkbox" name="AgreedToTerms" required>
             <label>I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a>.</label>
@@ -462,4 +459,9 @@ footer .wrap{
   <div class="wrap">
     <span>© 2026 559 Mobile Repairs</span>
     <span>(559) 240‑7191 · jonathan@559fix.com</span>
-    <span>Serving
+    <span>Serving Fresno & the 559 area</span>
+  </div>
+</footer>
+
+</body>
+</html>
