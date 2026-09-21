@@ -11,13 +11,13 @@
 <style>
 /* ---------- Corporate Blue Palette ---------- */
 :root{
-  --ink:#0D1A2B;          /* deep navy */
-  --ink-soft:#4A5A6A;     /* steel gray */
-  --paper:#FFFFFF;        /* white */
-  --panel:#F5F7FA;        /* light tech gray */
-  --accent:#1E63FF;       /* corporate blue */
-  --accent-soft:#AFC7FF;  /* soft blue */
-  --border:#0D1A2B;       /* navy */
+  --ink:#0D1A2B;
+  --ink-soft:#4A5A6A;
+  --paper:#FFFFFF;
+  --panel:#F5F7FA;
+  --accent:#1E63FF;
+  --accent-soft:#AFC7FF;
+  --border:#0D1A2B;
   --font-display:'Archivo Black','Space Grotesk',sans-serif;
   --font-body:'Space Grotesk',sans-serif;
 }
@@ -259,5 +259,71 @@ input:focus,textarea:focus{
   border-radius:8px;
   cursor:pointer;
 }
+.pmr-submit:hover{
+  background:#0f4fe0;
+}
 
+.pmr-fine{
+  font-size:11px;
+  color:var(--ink-soft);
+  text-align:center;
+  margin-top:12px;
+}
 
+/* ---------- Footer ---------- */
+footer{
+  padding:24px 0 40px;
+  font-size:12.5px;
+  color:var(--ink-soft);
+  border-top:2px solid var(--accent);
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">559<span>·</span>MOBILE REPAIRS</div>
+    <nav class="primary-nav">
+      <a href="#services">Services</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-solid" href="#contact">Get a Quote</a>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <h1>Cracked screen?<br>Dead <mark>charging</mark><br>port?</h1>
+      <p class="lede">Bring in your broken phone and get a straight answer fast — free diagnosis, honest pricing, and a fix you can trust.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#contact">Get a Free Quote</a>
+        <a class="btn btn-outline" href="tel:5592407191">Call (559) 240‑7191</a>
+      </div>
+    </div>
+    <div class="hero-art"></div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="wrap">
+    <span class="item"><span class="dot"></span>Free diagnosis</span>
+    <span class="item"><span class="dot"></span>Most phone & tablet models</span>
+    <span class="item"><span class="dot"></span>Quality parts</span>
+    <span class="item"><span class="dot"></span>60‑day guarantee</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What we fix</p>
