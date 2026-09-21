@@ -8,108 +8,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>/* ---------- GLOBAL TEXT CONTRAST FIX ---------- */
-
-/* Make all body text fully black for readability */
-body,
-p,
-li,
-label,
-input,
-textarea,
-.section-head p,
-.lede,
-.steps-list li,
-.ship-box,
-footer {
-  color:#000 !important;
-}
-
-/* Headings stay dark forest but readable */
-h1, h2, h3 {
-  color:#1E2A22 !important;
-}
-
-/* Eyebrow labels (section headers) */
-.eyebrow {
-  color:#1E2A22 !important;
-}
-
-/* Trust strip items */
-.trust-strip .item {
-  color:#000 !important;
-}
-
-/* Service cards */
-.service-card p,
-.service-card h3 {
-  color:#000 !important;
-}
-
-/* Steps */
-.step p,
-.step h3,
-.step .num {
-  color:#000 !important;
-}
-
-/* Contact section text */
-.contact-section,
-.contact-section p,
-.contact-info,
-.contact-info div {
-  color:#000 !important;
-}
-
-/* Form fields */
-.pmr-form-wrap label {
-  color:#000 !important;
-}
-.pmr-form-wrap input,
-.pmr-form-wrap textarea {
-  color:#000 !important;
-}
-
-/* Guarantee strip text */
-.guarantee-strip {
-  color:#000 !important;
-}
-
-/* Terms section */
-#terms p,
-#terms li,
-#terms h3 {
-  color:#000 !important;
-}
-
-/* Footer */
-footer {
-  color:#000 !important;
-}
-
-
-/* ---------- Mountain Community Palette ---------- */
+<style>
+/* ---------- Black & White Palette ---------- */
 :root{
-  --ink:#1E2A22;
-  --ink-soft:#4A5A52;
-  --paper:#F3EFE7;
-  --panel:#FAF8F3;
-  --accent:#3E6B4F;
-  --accent-soft:#6E8F7A;
-  --hazard:#C47A3A;
-  --glow:#8BBF9F;
-  --border:#2F3C34;
+  --ink:#000000;
+  --ink-soft:#444444;
+  --paper:#FFFFFF;
+  --panel:#F7F7F7;
+  --accent:#000000;
+  --accent-soft:#777777;
+  --border:#000000;
   --font-display:'Archivo Black','Space Grotesk',sans-serif;
   --font-body:'Space Grotesk',sans-serif;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --ink:#E8E4DA;
-    --ink-soft:#C9D2C8;
-    --paper:#1A2420;
-    --panel:#223029;
-    --border:#E8E4DA;
-  }
 }
 
 /* ---------- Base ---------- */
@@ -131,7 +41,7 @@ a{ color:inherit; text-decoration:none; }
 /* ---------- Header ---------- */
 header{
   padding:18px 0;
-  border-bottom:2px solid var(--accent);
+  border-bottom:2px solid var(--border);
   background:var(--paper);
   position:sticky;
   top:0;
@@ -146,26 +56,25 @@ header{
   font-family:var(--font-display);
   font-size:20px;
 }
-.brand span{ color:var(--accent); }
+.brand span{ color:#000; }
 .back-link{
   font-size:14px;
   font-weight:600;
-  color:var(--accent);
+  color:#000;
 }
 
 /* ---------- Section Shell ---------- */
 section{
   padding:32px 0;
-  border:none;
 }
 
 /* ---------- Hero ---------- */
 .hero{
-  background:linear-gradient(135deg,#F3EFE7,#E7E3D8,#D9E4D5);
+  background:#FFFFFF;
   padding:48px 0 24px;
 }
 .eyebrow{
-  color:var(--accent);
+  color:#000;
   font-weight:700;
   font-size:13px;
   margin-bottom:8px;
@@ -178,338 +87,4 @@ h1{
 .lede{
   font-size:16px;
   color:var(--ink-soft);
-  max-width:60ch;
-}
-
-/* ---------- Guarantee ---------- */
-.guarantee-strip{
-  background:var(--hazard);
-  color:var(--paper);
-  padding:20px;
-  border-radius:10px;
-  margin:28px 0;
-}
-.guarantee-strip .badge{
-  font-family:var(--font-display);
-  font-size:28px;
-  margin-right:12px;
-}
-
-/* ---------- Steps ---------- */
-h2{
-  font-family:var(--font-display);
-  font-size:clamp(22px,3vw,28px);
-  margin-bottom:18px;
-}
-.steps-list{
-  padding-left:20px;
-  margin:0;
-}
-.steps-list li{
-  margin-bottom:10px;
-  font-size:14.5px;
-  color:var(--ink-soft);
-}
-.steps-list li strong{
-  color:var(--ink);
-}
-
-/* ---------- Ship Box ---------- */
-.ship-box{
-  background:var(--panel);
-  border:2px solid var(--accent-soft);
-  border-radius:10px;
-  padding:18px 20px;
-  margin-top:18px;
-  font-size:14px;
-}
-.ship-box .label{
-  font-size:11px;
-  font-weight:700;
-  color:var(--accent);
-  margin-bottom:6px;
-}
-
-/* ---------- Form ---------- */
-.pmr-form-wrap{
-  background:var(--panel);
-  border:2px solid var(--accent);
-  border-radius:12px;
-  padding:28px;
-}
-.pmr-field{
-  margin-bottom:14px;
-}
-label{
-  display:block;
-  font-size:12px;
-  font-weight:700;
-  margin-bottom:6px;
-}
-input,textarea{
-  width:100%;
-  padding:11px 12px;
-  font-size:14px;
-  border:1.5px solid var(--accent-soft);
-  border-radius:8px;
-  background:#fff;
-  color:var(--ink);
-}
-input:focus,textarea:focus{
-  border-color:var(--accent);
-  box-shadow:0 0 0 3px rgba(62,107,79,0.25);
-  outline:none;
-}
-textarea{ min-height:80px; resize:vertical; }
-
-.pmr-row2{
-  display:flex;
-  gap:12px;
-}
-.pmr-row2 .pmr-field{ flex:1; }
-@media(max-width:480px){
-  .pmr-row2{ flex-direction:column; gap:0; }
-}
-
-.agree-row{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  background:var(--paper);
-  border:1.5px solid var(--accent-soft);
-  padding:14px 16px;
-  border-radius:10px;
-  margin:18px 0 20px;
-}
-.agree-row input[type="checkbox"]{
-  width:16px;
-  height:16px;
-  margin-top:3px;
-}
-.agree-row a{
-  color:var(--accent);
-  font-weight:700;
-  text-decoration:underline;
-}
-
-.pmr-submit{
-  width:100%;
-  background:var(--accent);
-  color:var(--paper);
-  border:none;
-  padding:14px 18px;
-  font-size:15px;
-  font-weight:700;
-  border-radius:8px;
-  cursor:pointer;
-}
-.pmr-submit:hover{
-  background:#2f523c;
-}
-.pmr-fine{
-  font-size:11px;
-  color:var(--ink-soft);
-  text-align:center;
-  margin-top:12px;
-}
-
-/* ---------- Terms ---------- */
-#terms h3{
-  font-family:var(--font-display);
-  font-size:16px;
-  margin:26px 0 8px;
-  color:var(--accent);
-}
-#terms p,#terms li{
-  font-size:13.5px;
-  color:var(--ink-soft);
-  line-height:1.65;
-}
-#terms ul{
-  padding-left:20px;
-  margin:0 0 12px;
-}
-.legal-note{
-  background:var(--panel);
-  border:1.5px dashed var(--accent);
-  border-radius:10px;
-  padding:14px 16px;
-  font-size:12px;
-  margin-top:24px;
-}
-
-/* ---------- Footer ---------- */
-footer{
-  padding:32px 0;
-  font-size:12.5px;
-  color:var(--ink-soft);
-}
-footer .wrap{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:10px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="wrap header-row">
-    <a class="brand" href="/">559<span>·</span>MOBILE REPAIRS</a>
-    <a class="back-link" href="/">← Back to home</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap">
-    <p class="eyebrow">Mail-In Repair</p>
-    <h1>Send it in, we’ll fix it, guaranteed.</h1>
-    <p class="lede">Not local to Fresno? No problem. Ship us your device, we diagnose and repair it, and send it back working — backed by our 60‑day guarantee.</p>
-
-    <div class="guarantee-strip">
-      <span class="badge">60‑DAY</span>
-      Every mail‑in repair is covered by a 60‑day guarantee on parts and labor.
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>How mail‑in repair works</h2>
-
-    <ol class="steps-list">
-      <li><strong>Submit the form below</strong> with your device and issue.</li>
-      <li><strong>Pack and ship your device</strong> to the address below.</li>
-      <li><strong>We diagnose and repair it</strong> within 2–3 business days.</li>
-      <li><strong>We ship it back</strong> with your 60‑day guarantee.</li>
-    </ol>
-
-    <div class="ship-box">
-      <span class="label">SHIP YOUR DEVICE TO</span>
-      559 Mobile Repairs<br>
-      39927 Clover Lane<br>
-      Squaw Valley, CA 93675
-      <div style="margin-top:8px;">Include your name, phone number, and issue description.</div>
-    </div>
-  </div>
-</section>
-
-<section id="request">
-  <div class="wrap">
-    <h2>Start a mail‑in request</h2>
-
-    <div class="pmr-form-wrap">
-      <form action="https://formspree.io/f/mbglddaa" method="POST">
-
-        <div class="pmr-row2">
-          <div class="pmr-field">
-            <label>Name</label>
-            <input type="text" name="Name" required>
-          </div>
-          <div class="pmr-field">
-            <label>Phone</label>
-            <input type="tel" name="Phone" required>
-          </div>
-        </div>
-
-        <div class="pmr-field">
-          <label>Email</label>
-          <input type="email" name="Email" required>
-        </div>
-
-        <div class="pmr-field">
-          <label>Device</label>
-          <input type="text" name="Device" placeholder="e.g. iPhone 13, LG V50, Galaxy S22" required>
-        </div>
-
-        <div class="pmr-field">
-          <label>What's going on?</label>
-          <textarea name="Issue" required></textarea>
-        </div>
-
-        <div class="pmr-row2">
-          <div class="pmr-field">
-            <label>Return Street Address</label>
-            <input type="text" name="Return Address" required>
-          </div>
-          <div class="pmr-field">
-            <label>Return City</label>
-            <input type="text" name="Return City" required>
-          </div>
-        </div>
-
-        <div class="pmr-row2">
-          <div class="pmr-field">
-            <label>State</label>
-            <input type="text" name="Return State" required>
-          </div>
-          <div class="pmr-field">
-            <label>ZIP</label>
-            <input type="text" name="Return ZIP" required>
-          </div>
-        </div>
-
-        <div class="agree-row">
-          <input type="checkbox" name="Agreed to Terms" value="Yes" required>
-          <label>I agree to the <a href="#terms">Mail‑In Repair Terms & Conditions</a>.</label>
-        </div>
-
-        <button type="submit" class="pmr-submit">Submit Mail‑In Request</button>
-        <p class="pmr-fine">We’ll follow up with a price estimate before you ship anything.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section id="terms">
-  <div class="wrap">
-    <h2>Mail‑In Repair Terms & Conditions</h2>
-
-    <h3>60‑Day Guarantee</h3>
-    <p>Your repair is covered for 60 days for defects in parts or workmanship.</p>
-
-    <h3>What's covered</h3>
-    <ul>
-      <li>Failure of the part we installed</li>
-      <li>Workmanship issues related to the repair</li>
-    </ul>
-
-    <h3>What's not covered</h3>
-    <ul>
-      <li>New physical damage</li>
-      <li>Liquid damage after return</li>
-      <li>Third‑party repairs</li>
-      <li>Cosmetic issues</li>
-    </ul>
-
-    <h3>Shipping Responsibility</h3>
-    <ul>
-      <li>You are responsible for inbound shipping.</li>
-      <li>We return ship using a trackable method.</li>
-      <li>Pack your device securely.</li>
-    </ul>
-
-    <h3>Data</h3>
-    <p>Please back up your device before shipping.</p>
-
-    <h3>Turnaround Time</h3>
-    <p>Most repairs completed within 2–3 business days of arrival.</p>
-
-    <div class="legal-note">
-      These terms may be updated periodically.
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <span>© 2026 559 Mobile Repairs</span>
-    <span>(559) 240‑7191 · jonathan@559fix.com</span>
-    <span>Serving Fresno & the 559 area</span>
-  </div>
-</footer>
-
-</body>
-</html>
+  max
