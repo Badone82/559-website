@@ -191,9 +191,7 @@ nav.primary-nav a{
   border-radius:10px;
   padding:18px;
 }
-.step .num{.steps-list li strong{
-  color:#000;
-}
+.step .num{
   font-family:var(--font-display);
   font-size:32px;
   color:var(--accent);
@@ -257,6 +255,29 @@ input:focus,textarea:focus{
   border-color:var(--accent);
   box-shadow:0 0 0 3px rgba(30,99,255,0.25);
 }
+
+/* ---------- Terms Checkbox ---------- */
+.agree-row{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  background:#FFF;
+  border:1.5px solid var(--accent-soft);
+  padding:14px 16px;
+  border-radius:10px;
+  margin:18px 0 20px;
+}
+.agree-row input[type="checkbox"]{
+  width:16px;
+  height:16px;
+  margin-top:3px;
+}
+.agree-row a{
+  color:var(--accent);
+  font-weight:700;
+  text-decoration:underline;
+}
+
 .pmr-submit{
   width:100%;
   background:var(--accent);
@@ -423,6 +444,12 @@ footer .wrap{
             <textarea name="Issue" required></textarea>
           </div>
 
+          <!-- TERMS CHECKBOX -->
+          <div class="agree-row">
+            <input type="checkbox" name="AgreedToTerms" required>
+            <label>I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a>.</label>
+          </div>
+
           <button type="submit" class="pmr-submit">Send Request</button>
           <p class="pmr-fine">We'll text or call you back, usually same day.</p>
         </form>
@@ -435,9 +462,4 @@ footer .wrap{
   <div class="wrap">
     <span>© 2026 559 Mobile Repairs</span>
     <span>(559) 240‑7191 · jonathan@559fix.com</span>
-    <span>Serving Fresno & the 559 area</span>
-  </div>
-</footer>
-
-</body>
-</html>
+    <span>Serving
