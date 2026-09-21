@@ -9,15 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ---------- Black & White Palette ---------- */
+/* ---------- Corporate Blue Palette ---------- */
 :root{
-  --ink:#000000;
-  --ink-soft:#444444;
-  --paper:#FFFFFF;
-  --panel:#F7F7F7;
-  --accent:#000000;
-  --accent-soft:#777777;
-  --border:#000000;
+  --ink:#0D1A2B;          /* deep navy */
+  --ink-soft:#4A5A6A;     /* steel gray */
+  --paper:#FFFFFF;        /* white */
+  --panel:#F5F7FA;        /* light tech gray */
+  --accent:#1E63FF;       /* corporate blue */
+  --accent-soft:#AFC7FF;  /* soft blue */
+  --border:#0D1A2B;       /* navy */
   --font-display:'Archivo Black','Space Grotesk',sans-serif;
   --font-body:'Space Grotesk',sans-serif;
 }
@@ -41,7 +41,7 @@ a{ color:inherit; text-decoration:none; }
 /* ---------- Header ---------- */
 header{
   padding:16px 0;
-  border-bottom:2px solid var(--border);
+  border-bottom:2px solid var(--accent);
   background:var(--paper);
   position:sticky;
   top:0;
@@ -56,7 +56,7 @@ header{
   font-family:var(--font-display);
   font-size:20px;
 }
-.brand span{ color:var(--ink); }
+.brand span{ color:var(--accent); }
 
 nav.primary-nav{
   display:flex;
@@ -68,39 +68,31 @@ nav.primary-nav a{
   color:var(--ink);
 }
 
-.header-cta{
-  display:flex;
-  gap:14px;
-}
+/* ---------- Buttons ---------- */
 .btn{
   padding:10px 18px;
   font-size:14px;
   font-weight:700;
-  border:2px solid var(--border);
+  border:2px solid var(--accent);
   border-radius:8px;
 }
 .btn-solid{
-  background:var(--ink);
-  color:var(--paper);
+  background:var(--accent);
+  color:#FFF;
 }
 .btn-outline{
-  background:transparent;
-  color:var(--ink);
-}
-
-/* ---------- Section Shell ---------- */
-section{
-  padding:32px 0;
+  background:#FFF;
+  color:var(--accent);
 }
 
 /* ---------- Hero ---------- */
 .hero-inner{
-  padding:48px 0 32px;
+  padding:64px 0 40px;
   display:grid;
   grid-template-columns:1.1fr 0.9fr;
   gap:40px;
   align-items:center;
-  background:var(--paper);
+  background:linear-gradient(135deg,#FFFFFF,#E9F0FF,#D6E4FF);
 }
 .hero-inner h1{
   font-family:var(--font-display);
@@ -108,7 +100,7 @@ section{
   margin:0 0 20px;
 }
 .hero-inner mark{
-  background:#000;
+  background:var(--accent);
   color:#FFF;
   padding:0 4px;
 }
@@ -133,7 +125,7 @@ section{
 .trust-strip .dot{
   width:8px;
   height:8px;
-  background:#000;
+  background:var(--accent);
   border-radius:50%;
 }
 
@@ -145,7 +137,7 @@ section{
 .section-head .eyebrow{
   font-size:13px;
   font-weight:700;
-  color:#000;
+  color:var(--accent);
 }
 .section-head h2{
   font-family:var(--font-display);
@@ -160,12 +152,12 @@ section{
 .services-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:12px;
+  gap:16px;
 }
 .service-card{
   background:var(--panel);
-  border:1.5px solid var(--border);
-  border-radius:8px;
+  border:2px solid var(--accent-soft);
+  border-radius:10px;
   padding:20px;
   position:relative;
 }
@@ -176,7 +168,8 @@ section{
   left:-2px;
   width:10px;
   height:10px;
-  background:#000;
+  background:var(--accent);
+  border-radius:3px;
 }
 .service-card h3{
   font-family:var(--font-display);
@@ -194,9 +187,67 @@ section{
 }
 .step{
   background:var(--panel);
-  border:1.5px solid var(--border);
-  border-radius:8px;
+  border:2px solid var(--accent-soft);
+  border-radius:10px;
   padding:18px;
 }
 .step .num{
-  font-family:
+  font-family:var(--font-display);
+  font-size:32px;
+  color:var(--accent);
+}
+
+/* ---------- Contact Section ---------- */
+.contact-section{
+  background:var(--accent);
+  color:#FFF;
+  padding:40px 0;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:32px;
+}
+.contact-info .label{
+  font-size:11px;
+  font-weight:700;
+  color:#FFF;
+}
+.phone-big{
+  font-family:var(--font-display);
+  font-size:26px;
+  color:#FFF;
+}
+
+/* ---------- Form ---------- */
+.pmr-form-wrap{
+  background:var(--panel);
+  border:2px solid var(--accent);
+  border-radius:12px;
+  padding:24px;
+}
+.pmr-field{
+  margin-bottom:14px;
+}
+label{
+  font-size:12px;
+  font-weight:700;
+}
+input,textarea{
+  width:100%;
+  padding:11px 12px;
+  font-size:14px;
+  border:1.5px solid var(--accent-soft);
+  border-radius:8px;
+  background:#FFF;
+  color:var(--ink);
+}
+textarea{ min-height:80px; resize:vertical; }
+input:focus,textarea:focus{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(30,99,255,0.25);
+}
+.pmr-submit{
+  width:100%;
+  background:var
