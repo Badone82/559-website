@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Terms & Conditions — 559 Mobile Repairs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Space Grotesk',sans-serif;
+  background:#FFFFFF;
+  color:#0D1A2B;
+  line-height:1.6;
+}
+.wrap{
+  max-width:900px;
+  margin:0 auto;
+  padding:24px;
+}
+h1,h2,h3{
+  font-family:'Archivo Black',sans-serif;
+}
+h1{
+  font-size:32px;
+  margin-bottom:20px;
+}
+h2{
+  margin-top:32px;
+  font-size:24px;
+}
+h3{
+  margin-top:20px;
+  font-size:18px;
+  color:#1E63FF;
+}
+ul{
+  padding-left:20px;
+}
+.back{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 16px;
+  background:#1E63FF;
+  color:#FFF;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <h1>Terms & Conditions</h1>
+
+  <!-- Insert your full policies here -->
+  <p>Device repair carries inherent risk. Some devices may be beyond repair, or may sustain further damage during the repair process...</p>
+
+  <h2>Repair Risks</h2>
+  <p>Device repair carries inherent risk. Some devices may be beyond repair...</p>
+
+  <h2>Estimates</h2>
+  <p>We do our best to give accurate estimates upfront...</p>
+
+  <h2>Limited Shop Warranty</h2>
+  <p>559 Mobile Repair offers a 60‑day warranty on all repairs...</p>
+
+  <h3>Warranty Exclusions</h3>
+  <ul>
+    <li>Repairs using parts not supplied by 559 Mobile Repair</li>
+    <li>Software issues</li>
+    <li>New symptoms unrelated to the original repair</li>
+    <li>Damage caused by user error</li>
+  </ul>
+
+  <h2>Shipping Policy</h2>
+  <p>Please follow the shipping instructions provided...</p>
+
+  <h2>Data & Privacy</h2>
+  <p>We take reasonable precautions to protect your data...</p>
+
+  <h2>Device Storage</h2>
+  <p>Devices not returned within 60 days may be considered abandoned...</p>
+
+  <a class="back" href="/">← Back to Home</a>
+</div>
+</body>
+</html>
